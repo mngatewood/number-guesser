@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Number Guesser</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body >
+    <header>
+      <h1>Number <span class="guesser">Guesser</span></h1>
+    </header>
+    <main>
+      <p id="inst-basic">Enter a desired range.</p>
+      <p id="inst-adv">Lock in your range.  <br>The range will increase each time you guess correctly.<p>
+      <p id="range-adjusted">The minimum and maximum values of the range have changed to increase the difficulty.  Guess again!</p>
+      <form id="form">
+        <input aria-label="Minimum" type="number" name="min" id="min" placeholder="Min" tabindex="101">
+        <input aria-label="Maximum" type="number" name="max" id="max" placeholder="Max" tabindex="102">
+        <input aria-label="Enter your guess." type="number" name="guess" id="guess" placeholder="Enter your guess" tabindex="103">
+        <label for="advanced" id="advanced-label">Check the box to enable advanced mode:</label><input label="Check the box for advanced mode" type="checkbox" name="advanced" id="advanced" tabindex="200"><br>
+        <button class="clear-left" type="button" name="submit" id="submit" tabindex="104">Guess</button>
+        <button type="button" name="clear" id="clear" tabindex="105">Clear</button>
+      </form>
+      <section class="results">
+        <p id="prev-guess-text">Enter a number between <span id= "textMin"></span> &amp; <span id="textMax"></span> and click the Guess button.</p>
+        <p id="prev-guess-number">Good luck!</p>
+        <p id="high-low-text"></p>
+        <button type="reset" name="reset" id="reset" tabindex="106">Reset</button>
+      </section>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+
